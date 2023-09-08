@@ -1,0 +1,25 @@
+@smoke
+Feature: Home page
+
+
+  Scenario: User should be able to see home page
+    Given user has navigated to the home page
+    When user views the home feed
+    Then user should be able to view articles on home feed
+
+    Scenario: User should be able to click on tags from the home page
+    Given user has navigated to the home page
+    When user clicks on a tag
+    Then user should see articles related to the tag
+
+  Scenario: User should be able to navigate to different pages
+    Given user has navigated to the home page
+    When user clicks a different page number
+    Then user should be navigated to that page number
+
+#  Scenario: User should be able to favourite an article from the home page
+#    Given user is logged in
+#    And user has navigated to the home page
+#    When user clicks on favourite button
+#    Then user should be able to view the article as favourited
+#

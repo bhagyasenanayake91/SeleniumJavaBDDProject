@@ -1,9 +1,9 @@
 package StepDefinitions;
 
-import cucumber.api.PendingException;
-import cucumber.api.java.en.*;
+//import cucumber.api.PendingException;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
 import pages.HomePage;
-import utility.BrowserDriver;
 
 public class Home {
 
@@ -17,18 +17,35 @@ public class Home {
         HomePage.get_home_page_title();
     }
 
-    @When("user clicks on a tag")
-    public void userClicksOnATag() {
-        
+    @When("user clicks on a tag on home feed page")
+    public void userClicksOnATag() throws Throwable{
+        HomePage.click_home_feed_tag();
     }
 
     @When("user clicks a different page number")
-    public void userClicksADifferentPageNumber() {
+    public void userClicksADifferentPageNumber() throws Throwable{
+        HomePage.click_page_number();
         
     }
 
     @Then("user should be navigated to that page number")
-    public void userShouldBeNavigatedToThatPageNumber() {
+    public void userShouldBeNavigatedToThatPageNumber() throws Throwable{
+        int page_number = Integer.parseInt(HomePage.get_page_number());
+        Assert.assertEquals(2, page_number);
+    }
+
+    @Given("user is not logged in")
+    public void userIsNotLoggedIn() {
+        
+    }
+
+    @Given("user has navigated to the registration page")
+    public void userHasNavigatedToTheRegistrationPage() {
+        
+    }
+
+    @Given("user has navigated to the log in page")
+    public void userHasNavigatedToTheLogInPage() {
 
     }
 }

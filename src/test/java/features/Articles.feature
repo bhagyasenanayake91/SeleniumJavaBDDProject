@@ -15,12 +15,12 @@ Feature: Articles page
     Given user is not logged in
     And user clicks on an article
     When user clicks on favourite button
-    Then user should be able prompted
+    Then user should be prompted to log in
 
   Scenario: User should be able to click on tags on article
 #    Given user is logged in
     Given user clicks on an article
-    When user clicks on a tag
+    When user clicks on a tag on the article page
     Then user should view articles related to the tag
 
   Scenario: User should be able to add a comment
@@ -33,4 +33,4 @@ Feature: Articles page
     Given user is not logged in
     And user clicks on an article
     When user clicks add comment
-    Then user should be be prompted to log in
+    Then user should be prompted to log in

@@ -6,7 +6,6 @@ import org.junit.Assert;
 import pages.HomePage;
 
 public class Home {
-
     @Given("^user has navigated to the home page$")
     public void navigate_to_home_page() throws Throwable{
         HomePage.navigate_to_home_page();
@@ -40,12 +39,13 @@ public class Home {
     }
 
     @Given("user has navigated to the registration page")
-    public void userHasNavigatedToTheRegistrationPage() {
-        
+    public void userHasNavigatedToTheRegistrationPage() throws Throwable{
+        HomePage.click_registration_link();
     }
 
     @Given("user has navigated to the log in page")
-    public void userHasNavigatedToTheLogInPage() {
+    public void userHasNavigatedToTheLogInPage() throws Throwable {
+        HomePage.click_sign_in_link();
 
     }
 }

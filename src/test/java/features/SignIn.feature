@@ -1,3 +1,4 @@
+#@smoke
 Feature: Sign in page functionality
 
   Scenario:User should be able to log in with valid credentials

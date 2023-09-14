@@ -18,7 +18,7 @@ public class BrowserDriver {
         System.setProperty("webdriver.http.factory","jdk-http-client");
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\bhagy\\IdeaProjects\\SeleniumJavaBDDProject\\src\\test\\resources\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
-//        driver.get("https://demo.realworld.io");
+        driver.get("https://demo.realworld.io");
 
     }
 
